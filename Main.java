@@ -10,7 +10,7 @@ public class Main {
         Laptop laptop2 = new Laptop ("hp_galaxy_x64", 8, 500, "Windows", "white", 15.6);
         Laptop laptop3 = new Laptop ("samsung_a52", 8, 300, "Not OS", "black", 16);
         Laptop laptop4 = new Laptop ("lenovo_gtx76", 16, 700, "Windows", "white", 17.6);
-        Laptop laptop5 = new Laptop ("macbook_14pro", 8, 1000, "MacOS", "white", 16);
+        Laptop laptop5 = new Laptop ("macbook_14pro", 8, 1000, "ios", "white", 16);
         Set<Laptop> unicLaptop = new HashSet<Laptop> ();
         unicLaptop.add (laptop1);
         unicLaptop.add (laptop2);
@@ -35,6 +35,9 @@ public class Main {
             if ((lap.getRam () >= ramUser) && (lap.getStorageCap () >= storUser) && lap.getDiagonal () >= digUser) {
                 System.out.println (lap.toString ());
             }
+            else;
+            System.out.println("Подходящих параметров нету, Просим прощения.");
+            break;
         }
         sc.close ();
     }
