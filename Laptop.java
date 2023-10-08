@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Laptop {
     private String name;
     private int ram;
@@ -17,7 +19,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return String.format ("os: %s \n объем оперативной памяти: %d Гб \n объем накопителя % d Гб \n ОС %s \n " +
+        return String.format ("os: %s \n объем оперативной памяти: %d Гб \n объем накопителя % d Гб \n OS %s \n " +
                 "Цвет %s \n Диагональ %.1f \n", this.name, this.ram, this.storageCap, this.os, this.color, this.diagonal);
     }
 
@@ -30,6 +32,11 @@ public class Laptop {
                     this.diagonal != ((Laptop) obj).diagonal;
         }
         return false;
+    }
+
+     @Override
+    public int hashCode() {
+        return Objects.hash(ram, storageCap, diagonal);
     }
 
     public int getRam() {
